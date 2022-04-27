@@ -1,0 +1,34 @@
+{
+	"[javascript]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": true
+		},
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": true
+		},
+	},
+    "[html]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": true
+		},
+    },
+	"eslint.enable": true,
+	"eslint.format.enable": true,
+	"eslint.codeActionsOnSave.mode": "problems",
+	"eslint.options": {
+        "extensions": [ ".js", ".html" ]
+    },
+    "eslint.validate": [
+        "javascript",
+        "html",
+    ],
+	"prettier.enable": true,
+	"prettier.singleQuote": true,
+	"prettier.bracketSpacing": false,
+	"editor.tabSize": 2,
+}

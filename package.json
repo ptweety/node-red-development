@@ -1,0 +1,50 @@
+{
+	"name": "node-red-development",
+	"version": "1.0.0",
+	"description": "Simple npm workspace for Node-RED development.",
+	"author": "ptweety",
+	"contributors": [
+		{
+			"name": "ptweety",
+			"email": "me@ptweety.net"
+		}
+	],
+	"private": false,
+	"engines": {
+		"npm": "8.5.0",
+		"node": "16.14.2"
+	},
+	"workspaces": [
+		"./packages/*"
+	],
+	"devDependencies": {
+		"@types/node-red": "1.2.1",
+		"@typescript-eslint/eslint-plugin": "5.26.0",
+		"@typescript-eslint/parser": "5.26.0",
+		"eslint": "8.16.0",
+		"eslint-config-prettier": "8.5.0",
+		"eslint-plugin-html": "6.2.0",
+		"eslint-plugin-import": "2.26.0",
+		"eslint-plugin-prettier": "4.0.0",
+		"eslint-plugin-unicorn": "42.0.0",
+		"node-red": "2.2.2",
+		"prettier": "2.6.2",
+		"typescript": "4.7.2"
+	},
+	"scripts": {
+		"inspect": "node --inspect ./node_modules/node-red/red.js -s ./.node-red/settings.js -u ./.node-red",
+		"lint": "./node_modules/.bin/eslint \"packages/**/*.{js,html,ts,tsx}\" --fix-dry-run; exit 0",
+		"lint:fix": "./node_modules/.bin/eslint \"packages/**/*.{js,html}\" --fix; exit 0",
+		"prettify": "./node_modules/.bin/prettier --check \"packages/**/*.{js,html}\"; exit 0",
+		"start": "node ./node_modules/node-red/red.js -s ./.node-red/settings.js -u ./.node-red",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ptweety/node-red-development.git"
+	},
+	"keywords": [
+		"node-red"
+	],
+	"license": "Apache-2.0"
+}

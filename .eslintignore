@@ -1,0 +1,5 @@
+!.eslintrc.js
+!packages/**/*.{js,html}
+**/.github/**
+**/.gitattributes
+**/.gitignore
