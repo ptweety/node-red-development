@@ -11,29 +11,32 @@
 	],
 	"private": false,
 	"engines": {
-		"npm": "8.5.0",
-		"node": "16.14.2"
+		"npm": "8.5.5",
+		"node": "16.15.0"
 	},
 	"workspaces": [
 		"./packages/*"
 	],
 	"devDependencies": {
 		"@types/node-red": "1.2.1",
-		"@typescript-eslint/eslint-plugin": "5.26.0",
-		"@typescript-eslint/parser": "5.26.0",
-		"eslint": "8.16.0",
+		"@typescript-eslint/eslint-plugin": "^5.27.1",
+		"@typescript-eslint/parser": "^5.27.1",
+		"eslint": "^8.17.0",
 		"eslint-config-prettier": "8.5.0",
 		"eslint-plugin-html": "6.2.0",
 		"eslint-plugin-import": "2.26.0",
 		"eslint-plugin-prettier": "4.0.0",
+		"eslint-plugin-promise": "6.0.0",
+		"eslint-plugin-sonarjs": "0.13.0",
 		"eslint-plugin-unicorn": "42.0.0",
 		"node-red": "2.2.2",
 		"prettier": "2.6.2",
-		"typescript": "4.7.2"
+		"typescript": "^4.7.3"
 	},
 	"scripts": {
 		"inspect": "node --inspect ./node_modules/node-red/red.js -s ./.node-red/settings.js -u ./.node-red",
-		"lint": "./node_modules/.bin/eslint \"packages/**/*.{js,html,ts,tsx}\" --fix-dry-run; exit 0",
+		"lint": "./node_modules/.bin/eslint \"packages/**/*.{js,html,ts,tsx}\"; exit 0",
+		"lint:dry": "./node_modules/.bin/eslint \"packages/**/*.{js,html,ts,tsx}\" --fix-dry-run; exit 0",
 		"lint:fix": "./node_modules/.bin/eslint \"packages/**/*.{js,html}\" --fix; exit 0",
 		"prettify": "./node_modules/.bin/prettier --check \"packages/**/*.{js,html}\"; exit 0",
 		"start": "node ./node_modules/node-red/red.js -s ./.node-red/settings.js -u ./.node-red",
